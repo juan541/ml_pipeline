@@ -25,10 +25,10 @@ def snowflake_connection():
             user=os.getenv("SN_USERNAME"),
             password=os.getenv("SN_PASSWORD"),
             account=os.getenv("SN_ACCOUNT"),
-            warehouse="COMPUTE_WH",
-            database="XRAY_DB",
-            schema="ML_DATA",
-            role="XTILLION_ENGINEERS"
+            warehouse=os.getenv("SN_WAREHOUSE"),
+            database=os.getenv("SN_DB"),
+            schema=os.getenv("SN_SCHEMA"),
+            role=os.getenv("SN_ROLE")
         )
         print("Connection to Snowflake established successfully")
         return conn
